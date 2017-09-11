@@ -1,0 +1,48 @@
+import React, {Component} from 'react';
+import {NavLink} from 'react-router-dom'
+
+class PostList extends Component {
+  constructor(props) {
+    super(props)
+        this.state = {
+          'List':[]
+        }
+      }
+
+      componentDidMount(){
+        fetch('https://tiny-lasagna-server.herokuapp.com/collections/blogger/')
+          .then(results => {
+              return results.json();
+            })
+            .then((data) => {
+              this.setState({
+                List: data
+              });
+            });
+      }
+render(){
+    let listStyle={
+backgroundImage: 'linear-gradient(white)',
+      display: 'table',
+    }
+    console.log(this.state.List);
+    let blogs = this.state.List
+    let list = blogs.map((post) => {
+      return(
+
+        <div>
+              <h1>Exotic gear</h1>
+        // <div key={post._id} style={listStyle}>
+        //   <NavLink to={`/all/${post._id}`}>{post.title}</NavLink>
+        </div>
+        </div>
+      )
+    })
+    return(
+      <div >
+      {list}
+      </div>
+    )
+  }
+}
+export default PostList
