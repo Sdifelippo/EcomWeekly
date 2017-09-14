@@ -11,6 +11,7 @@ class Contact extends Component {
       <div className="App" style={backgroundshade}>
         <div className="App-header">
           <h2>Contact us</h2>
+          <p>Contact Master Rahool at 555-swindled</p>
         </div>
       </div>
     );

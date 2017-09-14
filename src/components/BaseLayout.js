@@ -25,9 +25,12 @@ return (
   <div>
 
         <section style={navStyle}>
-        <NavLink to='/contact'  activeClassName='selected'>Contact us</NavLink>
-        <NavLink to='/aboutUs'  activeClassName='selected'>About us</NavLink>
-
+        <div>
+        <NavLink to='/contact' activeClassName='selected'>Contact </NavLink>
+        </div>
+        <div>
+        <NavLink to='/about' activeClassName='selected'>About </NavLink>
+        </div>
         <header style={headStyle}>Guardian&apos;s Shop</header>
         <nav className="nav navbar">
           <nav>
@@ -38,7 +41,7 @@ return (
 
             <Button variant="raised"><NavLink to='/legendary' activeClassName='selected'>Legendary Gear</NavLink></Button>
 
-            <Button variant="raised"><NavLink to='/all' activeClassName='selected'>Exotic Gear</NavLink></Button>
+            <Button variant="raised"><NavLink to='/exotic' activeClassName='selected'>Exotic Gear</NavLink></Button>
 
           </nav>
         </nav>

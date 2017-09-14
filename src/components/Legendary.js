@@ -1,90 +1,43 @@
 import React, {Component} from 'react';
+import {NavLink} from 'react-router-dom'
 
 class Legendary extends Component{
-  constructor(props){
-    super(props)
-    this.state = {
-      'name':'',
-      'title':'',
-      'blog':''
+  render() {
+    const backgroundshade = {
+      backgroundImage: 'linear-gradient(blue, #223A5E)',
+      color: 'white'
     }
-    this.addToList = this.addToList.bind(this)
-    this.handleNameChange = this.handleNameChange.bind(this)
-    this.handleTitleChange = this.handleTitleChange.bind(this)
-    this.handleBlogChange = this.handleBlogChange.bind(this)
-  }
-  addToList = (e) => {
-        e.preventDefault();
-        this.setState({
-          'name': e.target.value,
-          'title': e.target.value,
-          'blog': e.target.value
-        });
-        let listItem = JSON.stringify(this.state);
-
-        fetch("https://tiny-lasagna-server.herokuapp.com/collections/blogger/", {
-          method: "POST",
-          body: listItem,
-          headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json'
-          }
-        })
-        .then(response => {
-          console.log(response, "Got it");
-        })
-        .catch(err => {
-          console.log(err, "there may be an issue!");
-        });
-        this.setState({
-          name: '',
-          title: '',
-          blog: ''
-        });
+    let rareLink = {
+      color: 'white'
+    }
+    let legendaryGear = {
+      height: '4rem',
+      width: '4rem'
     }
 
-    handleNameChange(e){
-      this.setState({
-        name:e.target.value
-      })
-    }
-    handleTitleChange(e){
-      this.setState({
-        title:e.target.value
-      })
-    }
-    handleBlogChange(e){
-      this.setState({
-        blog:e.target.value
-      })
-    }
+    return (
+      <div className="App" style={backgroundshade}>
+        <div className="App-header">
+          <h2>This is Legendary gear</h2>
 
+          <img className="legendaryGear" style= {legendaryGear} alt="Master Rahool" src={require('./legendChest.png')}/>
+          <NavLink to='/' style={rareLink} activeClassName='legendaryGear'>Legendary Chest Piece</NavLink>
+          <p>Price:300 Glimmer</p>
 
-    render(){
-      let formStyle={
-          color: 'black',
-          height: '1200px'
-      }
-      return(
-      <div style={formStyle} >
-        <form >
-      <div className="form-group">
-      <h1>Legendary Gear</h1>
-        <label>Authors Name</label>
-        <input onChange={this.handleNameChange} value={this.state.name} type="text" className="form-control" placeholder="Name"></input>
-      </div>
-      <div className="form-group">
-        <label>Title</label>
-        <input onChange={this.handleTitleChange} value={this.state.title} type="text" className="form-control" placeholder="Title of Blog"></input>
-      </div>
-      <div className="form-group">
-        <label>Write your Blog here...</label>
-        <textarea onChange={this.handleBlogChange} value={this.state.blog} className="form-control" rows="3"></textarea>
-      </div>
-      <button variant="fab" onClick={this.addToList} type="submit" className="Submit-button">Submit</button>
-    </form>
+          <img className="legendaryGear" style= {legendaryGear} alt="Master Rahool" src={require('./legendBoots.png')}/>
+          <NavLink to='/' style={rareLink} activeClassName='selected'>Legendary Boots</NavLink>
+          <p>Price:300 Glimmer</p>
+
+          <img className="legendaryGear" style= {legendaryGear} alt="Master Rahool" src={require('./legendGauntlets.jpg')}/>
+          <NavLink to='/' style={rareLink} activeClassName='selected'>Legendary Gauntlets</NavLink>
+          <p>Price:300 Glimmer</p>
+
+          <p className="AppIntro">
+            Powered by Glimmer
+          </p>
         </div>
-      )
-    }
+      </div>
+    );
   }
-      export default Legendary;
+  }
+  export default Legendary;

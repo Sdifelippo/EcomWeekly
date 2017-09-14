@@ -9,11 +9,11 @@ import {BrowserRouter, Route, Switch} from 'react-router-dom'
 import App from './components/App'
 import BaseLayout from './components/BaseLayout'
 import Legendary from './components/Legendary'
-import PostList from './components/PostList'
 import ShowPost from './components/ShowPost'
 import Rare from './components/Rare'
+import Exotics from './components/Exotics'
 import Contact from './components/Contact'
-import AboutUs from './components/AboutUs'
+import About from './components/About'
 
 ReactDOM.render(
   <BrowserRouter>
@@ -22,10 +22,10 @@ ReactDOM.render(
         <Route exact path='/' component={App} />
         <Route path='/legendary' component={Legendary} />
         <Route path='/all/:id' component={ShowPost} />
-        <Route path='/all' component={PostList} />
         <Route path='/rare' component={Rare} />
+        <Route path='/exotic' component={Exotics} />
         <Route path='/contact' component={Contact} />
-        <Route path='/about' component={AboutUs} />
+        <Route path='/about' component={About} />
       </Switch>
     </BaseLayout>
   </BrowserRouter>
