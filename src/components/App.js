@@ -15,7 +15,7 @@ class App extends Component {
     return (
       <div className="App" style={backgroundshade}>
           <div className="App-header">
-          <h2>      <img className="MyImage" style= {MyImage} alt="Master Rahool" src={require('./rahool.jpg')}/>
+          <h2><img className="MyImage" style= {MyImage} alt="Master Rahool" src={require('../images/Master_Rahool.png')}/>
 Master Rahool&apos;s Shop</h2>
           <p className="AppIntro">
             Powered by Glimmer

@@ -1,43 +1,46 @@
 import React, {Component} from 'react';
-import {NavLink} from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import exotic from '../data/exotic.js';
+
 
 class Exotics extends Component{
   render() {
-    const backgroundshade = {
-      backgroundImage: 'linear-gradient(blue, #223A5E)',
-      color: 'white'
+    let bgStyle = {
+      backgroundImage: 'url(https://i.imgur.com/fMVeE1G.jpg/zip)',
+      backgroundSize: 'cover',
+      marginTop: '-5rem'
     }
-    let rareLink = {
-      color: 'white'
-    }
-    let legendaryGear = {
-      height: '4rem',
-      width: '4rem'
-    }
+
+    let match = this.props.match;
+
+    let navExotics = exotic.map((exotic) => {
+      return(
+        <div key={exotic.id} className="col-sm-4">
+          <div className="card" style={{marginTop: 20}}>
+            <img className="card-image-top" src={exotic.image} alt={exotic.imageAlt} style={{width:"150px", margin:"auto"}} />
+            <div className="card-block">
+              <h4 className="card-title">{exotic.name}</h4>
+              <p className="card-text" style={{color:"red", fontSize:"1.3em"}}><strong>{exotic.price}</strong></p>
+            </div>
+            <div className="card-footer">
+              <Link to={`${match.url}/${exotic.name}`}>Details</Link>
+            </div>
+          </div>
+        </div>
+      )
+    });
 
     return (
-      <div className="App" style={backgroundshade}>
-        <div className="App-header">
-          <h2>This is Exotic gear</h2>
-
-          <img className="legendaryGear" style= {legendaryGear} alt="Master Rahool" src={require('./exoticHelm.jpg')}/>
-          <NavLink to='/' style={rareLink} activeClassName='legendaryGear'>Exotic Helm</NavLink>
-          <p>Price:4 Legendary Shards</p>
-
-          <img className="legendaryGear" style= {legendaryGear} alt="Master Rahool" src={require('./exoticChest.jpg')}/>
-          <NavLink to='/' style={rareLink} activeClassName='selected'>Exotic Chest</NavLink>
-          <p>Price:4 Legendary Shards</p>
-
-          <img className="legendaryGear" style= {legendaryGear} alt="Master Rahool" src={require('./exoticGauntlets.jpg')}/>
-          <NavLink to='/' style={rareLink} activeClassName='selected'>Exotic Gauntlets</NavLink>
-          <p>Price:4 Legendary Shards</p>
-
-          <p className="AppIntro">
-            Powered by Glimmer
-          </p>
+      <div style={bgStyle}>
+      <section>
+      <div className="card-deck-wrapper" style={{marginLeft: 25, marginRight: 25 , marginTop: 70, marginBottom: 100}}>
+        <div className="card-deck">
+          {navExotics}
         </div>
+      </div>
+      </section>
       </div>
     );
   }
-  }
+}
   export default Exotics;

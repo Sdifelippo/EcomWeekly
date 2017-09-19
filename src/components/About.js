@@ -17,7 +17,7 @@ class About extends Component {
         <div className="App-header">
           <h2>About</h2>
           <p>Master Rahool is the Cryptarch of the Tower who sells and decodes engrams and exchanges enemy artifacts for Glimmer</p>
-          <img className="MyImage" style= {MyImage} alt="Master Rahool" src={require('./Master_Rahool.png')}/>
+          <img className="MyImage" style= {MyImage} alt="Master Rahool" src={require('../images/Master_Rahool.png')}/>
         </div>
       </div>
       </div>

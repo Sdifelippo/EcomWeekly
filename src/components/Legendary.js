@@ -1,43 +1,51 @@
-import React, {Component} from 'react';
-import {NavLink} from 'react-router-dom'
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom'
+import legendary from "../data/legendary.js";
 
 class Legendary extends Component{
   render() {
-    const backgroundshade = {
-      backgroundImage: 'linear-gradient(blue, #223A5E)',
-      color: 'white'
+
+    let bgStyle = {
+      backgroundImage: 'url(https://i.imgur.com/fMVeE1G.jpg/zip)',
+      backgroundSize: 'cover',      
+      marginTop: '-5rem'
+
+
     }
-    let rareLink = {
-      color: 'white'
-    }
-    let legendaryGear = {
-      height: '4rem',
-      width: '4rem'
-    }
+
+    let match = this.props.match;
+
+    let navLegendary = legendary.map((legendary) => {
+      return(
+        <div key={legendary.id} className="col-sm-4">
+          <div className="card" style={{marginTop: 20}}>
+            <img className="card-image-top" src={legendary.image} alt={legendary.imageAlt} style={{width:"150px", margin:"auto"}} />
+            <div className="card-block">
+              <h4 className="card-title">{legendary.name}</h4>
+              <p className="card-text" style={{color:"red", fontSize:"1.3em"}}><strong>{legendary.price}</strong></p>
+            </div>
+            <div className="card-footer">
+              <Link to={`${match.url}/${legendary.name}`}>Details</Link>
+            </div>
+          </div>
+        </div>
+      )
+    });
 
     return (
-      <div className="App" style={backgroundshade}>
-        <div className="App-header">
-          <h2>This is Legendary gear</h2>
+        <div style={bgStyle}>
+          <section>
+            <div className="card-deck-wrapper" style={{marginLeft: 25, marginRight: 25 , marginTop: 70, marginBottom: 100}}>
+            <div className="card-deck">
+              {navLegendary}
+            </div>
+            </div>
+          </section>
 
-          <img className="legendaryGear" style= {legendaryGear} alt="Master Rahool" src={require('./legendChest.png')}/>
-          <NavLink to='/' style={rareLink} activeClassName='legendaryGear'>Legendary Chest Piece</NavLink>
-          <p>Price:300 Glimmer</p>
+</div>
 
-          <img className="legendaryGear" style= {legendaryGear} alt="Master Rahool" src={require('./legendBoots.png')}/>
-          <NavLink to='/' style={rareLink} activeClassName='selected'>Legendary Boots</NavLink>
-          <p>Price:300 Glimmer</p>
+          );
+        }
+      }
 
-          <img className="legendaryGear" style= {legendaryGear} alt="Master Rahool" src={require('./legendGauntlets.jpg')}/>
-          <NavLink to='/' style={rareLink} activeClassName='selected'>Legendary Gauntlets</NavLink>
-          <p>Price:300 Glimmer</p>
-
-          <p className="AppIntro">
-            Powered by Glimmer
-          </p>
-        </div>
-      </div>
-    );
-  }
-  }
-  export default Legendary;
+export default Legendary;

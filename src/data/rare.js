@@ -22,6 +22,6 @@ const rare = [
     image: require('../images/rareGauntlets.png'),
     imageAlt: "Rare Gauntlets",
     details: "These are rare Gauntlets"
-  };
+  }]
 
 export default rare;

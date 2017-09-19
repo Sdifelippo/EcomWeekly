@@ -19,7 +19,7 @@ const exotic = [
     id: 3,
     name: "Doom Fang Pauldron",
     price: "1000 Glimmer",
-    image: require('../images/gexoticGauntlets.jpg'),
+    image: require('../images/exoticGauntlets.jpg'),
     imageAlt: "Exotic Gauntlets",
     details: "Shield Bash melee kills recharge Shield Throw. Melee ability kills recharge Sentinel Shield Super."
   },
