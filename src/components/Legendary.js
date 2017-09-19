@@ -7,7 +7,7 @@ class Legendary extends Component{
 
     let bgStyle = {
       backgroundImage: 'url(https://i.imgur.com/fMVeE1G.jpg/zip)',
-      backgroundSize: 'cover',      
+      backgroundSize: 'cover',
       marginTop: '-5rem'
 
 
@@ -25,7 +25,7 @@ class Legendary extends Component{
               <p className="card-text" style={{color:"red", fontSize:"1.3em"}}><strong>{legendary.price}</strong></p>
             </div>
             <div className="card-footer">
-              <Link to={`${match.url}/${legendary.name}`}>Details</Link>
+              <Link to={`${match.url}/${legendary.name}`}style={{color:"red", fontSize:"1.3em"}}>Details</Link>
             </div>
           </div>
         </div>

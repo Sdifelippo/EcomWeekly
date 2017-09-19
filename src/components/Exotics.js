@@ -23,7 +23,7 @@ class Exotics extends Component{
               <p className="card-text" style={{color:"red", fontSize:"1.3em"}}><strong>{exotic.price}</strong></p>
             </div>
             <div className="card-footer">
-              <Link to={`${match.url}/${exotic.name}`}>Details</Link>
+              <Link to={`${match.url}/${exotic.name}`}style={{color:"red", fontSize:"1.3em"}}>Details</Link>
             </div>
           </div>
         </div>

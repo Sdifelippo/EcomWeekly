@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import rare from "../data/rare.js";
+//import rareInfo from "./RareDetails.js"
+
 
 class RareArmor extends Component {
   render() {
@@ -22,7 +24,7 @@ class RareArmor extends Component {
                  <p className="card-text" style={{color:"red", fontSize:"1.3em"}}><strong>{rare.price}</strong></p>
              </div>
              <div className="card-footer">
-               <Link to={`${match.url}/${rare.name}`}>Details</Link>
+               <Link to={`${match.url}/${rare.name}`} style={{color:"red", fontSize:"1.3em"}}>Details</Link>
              </div>
            </div>
          </div>

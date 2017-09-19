@@ -17,7 +17,7 @@ class BaseLayout extends Component{
       }
 
     let selected={
-      color:'white'
+      color:'blue'
       }
 
 return (
@@ -26,10 +26,10 @@ return (
 
         <section style={navStyle}>
         <div>
-        <NavLink to='/contact' activeClassName='selected'>Contact </NavLink>
+        <Button variant="raised"><NavLink to='/contact' activeClassName='selected'>Contact</NavLink></Button>
         </div>
         <div>
-        <NavLink to='/about' activeClassName='selected'>About </NavLink>
+        <Button variant="raised"><NavLink to='/about' activeClassName='selected'>About </NavLink></Button>
         </div>
         <header style={headStyle}>Guardian&apos;s Shop</header>
         <nav className="nav navbar">
