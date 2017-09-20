@@ -1,5 +1,6 @@
 module.exports = {
-        "rare": {
+        "rare": [
+          {
           id: 1,
           name: "Rare Chest Armor",
           price: "100 Glimmer",
@@ -50,7 +51,7 @@ module.exports = {
             details: "These legendary Gauntlets will increase the reload speed of primary weapons."
           },
         ],
-        
+
         "exotic": [
           {
             id: 1,
@@ -75,5 +76,6 @@ module.exports = {
             image: require('../images/exoticGauntlets.jpg'),
             imageAlt: "Exotic Gauntlets",
             details: "Shield Bash melee kills recharge Shield Throw. Melee ability kills recharge Sentinel Shield Super."
-          },
-        ];
+          }
+        ]
+      }
