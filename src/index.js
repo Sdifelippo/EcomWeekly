@@ -1,16 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './styles/index.css';
-import registerServiceWorker from './registerServiceWorker';
-import {BrowserRouter, Route, Switch} from 'react-router-dom'
-import App from './components/App'
-import BaseLayout from './components/BaseLayout'
-import Legendaries from './components/Legendary'
-import LegendaryDetails from './components/LegendaryDetails'
-import Rare from './components/Rare'
-import Exotics from './components/Exotics'
-import Contact from './components/Contact'
-import About from './components/About'
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
+import App from './components/App';
+import BaseLayout from './components/BaseLayout';
+import Legendaries from './components/Legendary';
+import LegendaryDetails from './components/LegendaryDetails';
+import Rare from './components/Rare';
+import RareDetails from './components/RareDetails';
+import Exotics from './components/Exotics';
+import ExoticDetails from './components/ExoticDetails';
+import Contact from './components/Contact';
+import About from './components/About';
 
 ReactDOM.render(
   <BrowserRouter>
@@ -20,7 +21,9 @@ ReactDOM.render(
         <Route path='/legendary' component={Legendaries} />
         <Route path="/legendary/:ordernum" component={LegendaryDetails}/>
         <Route path='/rare' component={Rare} />
+        <Route path="/rare/:ordernum" component={RareDetails}/>
         <Route path='/exotic' component={Exotics} />
+        <Route path="/exotic/:ordernum" component={ExoticDetails}/>
         <Route path='/contact' component={Contact} />
         <Route path='/about' component={About} />
       </Switch>
@@ -28,4 +31,3 @@ ReactDOM.render(
   </BrowserRouter>
 
 , document.getElementById('root'));
-registerServiceWorker();

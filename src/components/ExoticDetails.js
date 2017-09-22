@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Exotic from '../data/exotic';
-import Detail from './ExoticDetails';
+import Detail from './Detail';
 
  class ExoticDetails extends Component {
 

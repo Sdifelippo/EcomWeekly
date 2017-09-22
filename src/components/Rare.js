@@ -24,7 +24,7 @@ class RareArmor extends Component {
                  <p className="card-text" style={{color:"green", fontSize:"1.3em"}}><strong>{rare.price}</strong></p>
              </div>
              <div className="card-footer">
-               <Link to={`${match.url}/${rare.name}`} style={{color:"red", fontSize:"1.3em"}}>Details</Link>
+               <Link to={`${match.url}/${rare.orderNumber}`} style={{color:"red", fontSize:"1.3em"}}>Details</Link>
              </div>
            </div>
          </div>

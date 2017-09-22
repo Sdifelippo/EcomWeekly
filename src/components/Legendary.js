@@ -7,9 +7,6 @@ class Legendaries extends Component{
 
     let bgStyle = {
       backgroundImage: 'url(https://i.imgur.com/fMVeE1G.jpg/zip)',
-
-
-
     }
 
     let match = this.props.match;
@@ -40,9 +37,7 @@ class Legendaries extends Component{
             </div>
             </div>
           </section>
-
-</div>
-
+        </div>
           );
         }
       }
