@@ -1,6 +1,7 @@
 const legendary = [
   {
     id: 1,
+    orderNumber: "S12LCA",
     name: "Legendry Chest Armor",
     price: "500 Glimmer",
     image: require('../images/legendChest.png'),
@@ -9,6 +10,7 @@ const legendary = [
   },
     {
     id: 2,
+    orderNumber: "S12LB",
     name: "Legendary Boots",
     price: "500 Glimmer",
     image: require('../images/legendBoots.png'),
@@ -17,6 +19,7 @@ const legendary = [
   },
   {
     id: 3,
+    orderNumber: "S12LG",
     name: "Legendary Gauntlets",
     price: "500 Glimmer",
     image: require('../images/legendGauntlets.jpg'),

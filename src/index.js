@@ -5,8 +5,8 @@ import registerServiceWorker from './registerServiceWorker';
 import {BrowserRouter, Route, Switch} from 'react-router-dom'
 import App from './components/App'
 import BaseLayout from './components/BaseLayout'
-import Legendary from './components/Legendary'
-import ShowPost from './components/ShowPost'
+import Legendaries from './components/Legendary'
+import LegendaryDetails from './components/LegendaryDetails'
 import Rare from './components/Rare'
 import Exotics from './components/Exotics'
 import Contact from './components/Contact'
@@ -17,8 +17,8 @@ ReactDOM.render(
     <BaseLayout>
       <Switch>
         <Route exact path='/' component={App} />
-        <Route path='/legendary' component={Legendary} />
-        <Route path='/all/:id' component={ShowPost} />
+        <Route path='/legendary' component={Legendaries} />
+        <Route path="/legendary/:ordernum" component={LegendaryDetails}/>
         <Route path='/rare' component={Rare} />
         <Route path='/exotic' component={Exotics} />
         <Route path='/contact' component={Contact} />

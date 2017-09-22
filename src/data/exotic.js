@@ -1,6 +1,7 @@
 const exotic = [
   {
     id: 1,
+    orderNumber: "S12NS",
     name: "Nezarec's Sin",
     price: "1000 Glimmer",
     image: require('../images/exoticHelm.jpg'),
@@ -9,6 +10,7 @@ const exotic = [
   },
     {
     id: 2,
+    orderNumber: "S12WSD",
     name: "Wings Of Sacred Dawn",
     price: "1000 Glimmer",
     image: require('../images/exoticChest.jpg'),
@@ -17,6 +19,7 @@ const exotic = [
   },
   {
     id: 3,
+    orderNumber: "S12DFP",
     name: "Doom Fang Pauldron",
     price: "1000 Glimmer",
     image: require('../images/exoticGauntlets.jpg'),

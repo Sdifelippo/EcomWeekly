@@ -21,7 +21,7 @@ class RareArmor extends Component {
              <img className="card-image-top" src={rare.image} alt={rare.imageAlt} style={{width: "150px", margin:"auto"}} />
              <div className="card-block">
                  <h4 className="card-title">{rare.name}</h4>
-                 <p className="card-text" style={{color:"red", fontSize:"1.3em"}}><strong>{rare.price}</strong></p>
+                 <p className="card-text" style={{color:"green", fontSize:"1.3em"}}><strong>{rare.price}</strong></p>
              </div>
              <div className="card-footer">
                <Link to={`${match.url}/${rare.name}`} style={{color:"red", fontSize:"1.3em"}}>Details</Link>

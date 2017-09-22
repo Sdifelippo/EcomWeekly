@@ -1,6 +1,7 @@
 const rare = [
   {
     id: 1,
+    orderNumber: "S12RCA",
     name: "Rare Chest Armor",
     price: "100 Glimmer",
     image: require('../images/rareChest.jpg'),
@@ -9,6 +10,7 @@ const rare = [
   },
     {
     id: 2,
+    orderNumber: "S12RB",
     name: "Rare Boots",
     price: "100 Glimmer",
     image: require('../images/rareLegs.jpg'),
@@ -17,6 +19,7 @@ const rare = [
   },
   {
     id: 3,
+    orderNumber: "S12RG",
     name: "Rare Gauntlets",
     price: "100 Glimmer",
     image: require('../images/rareGauntlets.png'),
