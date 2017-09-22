@@ -18,11 +18,11 @@ ReactDOM.render(
     <BaseLayout>
       <Switch>
         <Route exact path='/' component={App} />
-        <Route path='/legendary' component={Legendaries} />
+        <Route exact path='/legendary' component={Legendaries} />
         <Route path="/legendary/:ordernum" component={LegendaryDetails}/>
-        <Route path='/rare' component={Rare} />
+        <Route exact path='/rare' component={Rare} />
         <Route path="/rare/:ordernum" component={RareDetails}/>
-        <Route path='/exotic' component={Exotics} />
+        <Route exact path='/exotic' component={Exotics} />
         <Route path="/exotic/:ordernum" component={ExoticDetails}/>
         <Route path='/contact' component={Contact} />
         <Route path='/about' component={About} />

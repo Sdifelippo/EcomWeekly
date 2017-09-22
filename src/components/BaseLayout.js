@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {NavLink} from 'react-router-dom';
 import Button from 'muicss/lib/react/button';
-
+import DTower from '../images/DTower.jpg'
 
 class BaseLayout extends Component{
   render(){
@@ -19,18 +19,22 @@ class BaseLayout extends Component{
     let selected={
       color:'blue'
       }
+      let bgimage={
+          backgroundImage: {DTower}
+        }
 
 return (
 
   <div>
-
+      <div className='backgroundImage'>
         <section style={navStyle}>
         <div>
-        <Button variant="raised"><NavLink to='/contact' activeClassName='selected'>Contact</NavLink></Button>
+        < Button variant='raised'><NavLink to='/contact' activeClassName='selected'>Contact</NavLink></Button>
         </div>
         <div>
         <Button variant="raised"><NavLink to='/about' activeClassName='selected'>About </NavLink></Button>
         </div>
+
         <header style={headStyle}>Guardian&apos;s Shop</header>
         <nav className="nav navbar">
           <nav>
@@ -46,7 +50,8 @@ return (
           </nav>
         </nav>
         </section>
-        <section>
+      </div>
+        <section style={bgimage}>
           {this.props.children}
         </section>
       </div>

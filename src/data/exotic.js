@@ -1,4 +1,4 @@
-const exotic = [
+const exotics = [
   {
     id: 1,
     orderNumber: "S12NS",
@@ -28,4 +28,4 @@ const exotic = [
   },
 ];
 
-export default exotic;
+export default exotics;

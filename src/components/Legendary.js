@@ -7,15 +7,17 @@ class Legendaries extends Component{
 
     let bgStyle = {
       backgroundImage: 'url(https://i.imgur.com/fMVeE1G.jpg/zip)',
+      backgroundSize: 'cover',
+      marginTop: '-7rem'
     }
 
     let match = this.props.match;
 
     let navLegendary = legendary.map((legendary) => {
       return(
-        <div key={legendary.id} className="col-sm-4">
-          <div className="card" style={{marginTop: 20}}>
-            <img className="card-image-top" src={legendary.image} alt={legendary.imageAlt} style={{width:"150px", margin:"auto"}} />
+        <div key={legendary.id} >
+          <div className="card" style={{marginTop: 70}}>
+            <img className="card-image-top" src={legendary.image} alt={legendary.imageAlt} style={{width:"80px", margin:"auto"}} />
             <div className="card-block">
               <h4 className="card-title">{legendary.name}</h4>
               <p className="card-text" style={{color:"green", fontSize:"1.3em"}}><strong>{legendary.price}</strong></p>
@@ -31,7 +33,7 @@ class Legendaries extends Component{
     return (
         <div style={bgStyle}>
           <section>
-            <div className="card-deck-wrapper" style={{marginLeft: 25, marginRight: 25 , marginTop: 70, marginBottom: 100}}>
+            <div>
             <div className="card-deck">
               {navLegendary}
             </div>

@@ -14,10 +14,28 @@
   color: white;
 }
 
+section{
+  background-image: '../images/DTower.jpg';
+}
+
+nav{
+  display: flex;
+  justify-content: space-around;
+  margin-left: 30rem;
+  margin-right: 30rem;
+}
 .App-intro {
   font-size: large;
 }
 
+.mui-btn{
+  background-color: linear-gradient(grey, #223A5E);
+
+}
+.mui-panel{
+  background-color: black;
+  height: 1200px;
+}
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
